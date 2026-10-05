@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assests\banner.svg" alt="Telecom Customer Churn Analytics banner" width="100%"/>
+  <img src="telco-churn-analytics/assests/banner.svg" alt="Telecom Customer Churn Analytics banner" width="100%"/>
 </p>
 
 <p align="center">
