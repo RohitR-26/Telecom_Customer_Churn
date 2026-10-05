@@ -1,108 +1,180 @@
-# Telecom Customer Churn Analytics
+<p align="center">
+  <img src="C:\Users\asus\Downloads\telco-churn-analytics\telco-churn-analytics\assests\banner.svg" alt="Telecom Customer Churn Analytics banner" width="100%"/>
+</p>
 
-Analysis and prediction of customer churn for a telecom company. The goal is to understand **why customers leave** and to build a model that flags customers at high risk of churning, so retention efforts can be targeted.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/scikit--learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="scikit-learn"/>
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"/>
+  <img src="https://img.shields.io/badge/Status-In%20Progress-brightgreen?style=for-the-badge" alt="Status"/>
+</p>
 
-## Problem Statement
+<p align="center">
+  <b>📉 Understand churn &nbsp;•&nbsp; 🤖 Predict churn &nbsp;•&nbsp; 💡 Reduce churn</b>
+</p>
 
-Acquiring a new customer costs far more than keeping an existing one. This project explores customer demographics, service usage, and billing data to:
+---
 
-1. Identify the main drivers of churn
-2. Build a classification model to predict whether a customer will churn
-3. Suggest data-backed retention actions
+## 📌 Table of Contents
 
-## Dataset
+- [Overview](#-overview)
+- [Dataset](#-dataset)
+- [Workflow](#-workflow)
+- [Key Insights](#-key-insights)
+- [Model Performance](#-model-performance)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Tech Stack](#-tech-stack)
+- [Future Work](#-future-work)
+- [Author](#-author)
 
-- **Source:** TODO (e.g., IBM Telco Customer Churn dataset on Kaggle)
-- **Size:** TODO (rows x columns)
-- **Target variable:** `Churn` (Yes / No)
+---
 
-| Feature group | Examples |
+## 🎯 Overview
+
+Winning a new customer costs far more than keeping an existing one. This project analyses telecom customer data to:
+
+| | Goal |
 |---|---|
-| Demographics | gender, senior citizen, partner, dependents |
-| Account info | tenure, contract type, payment method, paperless billing |
-| Services | phone, internet service, online security, tech support, streaming |
-| Billing | monthly charges, total charges |
+| 🔍 | Discover **why** customers churn |
+| 🤖 | Build a model that **predicts** who is likely to leave |
+| 💡 | Recommend **retention actions** backed by data |
 
-> The raw data is not committed to this repo (see `.gitignore`). Download it from the source above and place it in a `data/` folder.
+---
 
-## Project Structure
+## 🗂️ Dataset
 
+- **Source:** TODO (e.g., IBM Telco Customer Churn on Kaggle)
+- **Size:** TODO rows × TODO columns
+- **Target:** `Churn` (Yes / No)
+
+| 👤 Demographics | 📄 Account | 📡 Services | 💳 Billing |
+|---|---|---|---|
+| Gender | Tenure | Phone / Internet | Monthly charges |
+| Senior citizen | Contract type | Online security | Total charges |
+| Partner / Dependents | Payment method | Tech support, streaming | Paperless billing |
+
+> 📝 Raw data is not committed to this repo. Download it from the source above and place it in a `data/` folder.
+
+---
+
+## 🔄 Workflow
+
+```mermaid
+flowchart LR
+    A[📥 Raw Data] --> B[🧹 Cleaning]
+    B --> C[📊 EDA]
+    C --> D[🛠️ Feature Engineering]
+    D --> E[🤖 Modeling]
+    E --> F[📏 Evaluation]
+    F --> G[💡 Insights]
 ```
-Telecom_Customer_Churn/
-├── telco-churn-analytics/
-│   ├── data/              # raw and processed data (not tracked)
-│   ├── notebooks/         # EDA and modeling notebooks   (TODO: adjust)
-│   ├── src/               # reusable scripts             (TODO: adjust)
-│   └── requirements.txt   # Python dependencies
-└── README.md
+
+---
+
+## 📊 Key Insights
+
+> 🚧 Replace the placeholders below with your real findings and charts.
+
+<p align="center">
+  <img src="assets/churn_distribution.png" width="45%" alt="Churn distribution"/>
+  &nbsp;
+  <img src="assets/churn_by_contract.png" width="45%" alt="Churn by contract type"/>
+</p>
+
+- 📆 **Contract type:** month-to-month customers tend to churn the most (TODO: add your %)
+- ⏳ **Tenure:** churn is usually highest in the first months (TODO: add your numbers)
+- 💸 **Charges:** TODO
+- 🌐 **Services:** TODO
+
+<details>
+<summary><b>📸 How to add your charts</b></summary>
+
+In your notebook, save each plot, then commit the `assets/` folder:
+
+```python
+import os
+os.makedirs("assets", exist_ok=True)
+plt.savefig("assets/churn_by_contract.png", dpi=150, bbox_inches="tight")
 ```
 
-## Approach
+</details>
 
-1. **Data cleaning**: fix data types (e.g., `TotalCharges`), handle missing values, remove duplicates
-2. **Exploratory data analysis**: churn rate by contract, tenure, charges, and services
-3. **Feature engineering**: encode categoricals, scale numeric features, create tenure groups
-4. **Modeling**: train and compare classifiers (TODO: e.g., Logistic Regression, Random Forest, XGBoost)
-5. **Evaluation**: accuracy, precision, recall, F1, ROC-AUC, with extra attention to recall on the churn class
-6. **Interpretation**: feature importance to explain churn drivers
+---
 
-## Key Findings
-
-> TODO: fill in once your analysis is complete. Example format:
-
-- Customers on **month-to-month contracts** churn at a much higher rate than those on yearly contracts
-- Churn is highest in the **first few months** of tenure
-- TODO: add your own findings with numbers
-
-## Model Performance
+## 🏆 Model Performance
 
 | Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
 |---|---|---|---|---|---|
-| TODO | | | | | |
+| TODO (e.g., Logistic Regression) | – | – | – | – | – |
+| TODO (e.g., Random Forest) | – | – | – | – | – |
+| TODO (e.g., XGBoost) | – | – | – | – | – |
 
-## Getting Started
+<p align="center">
+  <img src="assets/confusion_matrix.png" width="40%" alt="Confusion matrix"/>
+  &nbsp;
+  <img src="assets/feature_importance.png" width="45%" alt="Feature importance"/>
+</p>
 
-### Prerequisites
+---
 
-- Python 3.9+
-- Git
+## 📁 Project Structure
 
-### Installation
+```
+Telecom_Customer_Churn/
+├── assets/                  # banner and chart images
+├── telco-churn-analytics/
+│   ├── data/                # datasets (not tracked)
+│   ├── notebooks/           # EDA and modeling notebooks   (TODO: adjust)
+│   └── requirements.txt
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# 1. Clone
 git clone https://github.com/RohitR-26/Telecom_Customer_Churn.git
 cd Telecom_Customer_Churn/telco-churn-analytics
 
+# 2. Create a virtual environment
 python -m venv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # macOS / Linux
+venv\Scripts\activate          # Windows
+# source venv/bin/activate     # macOS / Linux
 
+# 3. Install dependencies
 pip install -r requirements.txt
-```
 
-### Run
-
-```bash
+# 4. Launch
 jupyter notebook
 ```
 
-Then open the notebooks in order. (TODO: list notebook names.)
+---
 
-## Tech Stack
+## 🧰 Tech Stack
 
-- Python, Pandas, NumPy
-- Matplotlib, Seaborn
-- Scikit-learn
-- Jupyter Notebook
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,pandas,numpy,sklearn,jupyter,git,github,vscode" alt="Tech stack icons"/>
+</p>
 
-## Future Improvements
+---
 
-- Hyperparameter tuning and cross-validation
-- Handle class imbalance (SMOTE or class weights)
-- Deploy the model as a simple web app (Streamlit or Flask)
-- Build a dashboard (Power BI or Tableau) for business users
+## 🔮 Future Work
 
-## Author
+- [ ] Hyperparameter tuning and cross-validation
+- [ ] Handle class imbalance (SMOTE or class weights)
+- [ ] Deploy as a Streamlit web app
+- [ ] Build a Power BI / Tableau dashboard
 
-**Rohit R**
-GitHub: [@RohitR-26](https://github.com/RohitR-26)
+---
+
+## 👨‍💻 Author
+
+**Rohit R** — [@RohitR-26](https://github.com/RohitR-26)
+
+<p align="center">
+  ⭐ If you found this useful, consider giving the repo a star!
+</p>
